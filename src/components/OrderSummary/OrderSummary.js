@@ -15,6 +15,9 @@ const orderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
+            <div>
+                <p>Order Price: ${props.price.toFixed(2)}</p>
+            </div>
             <p>Continue to Checkout?</p>
         </Aux>
     );
