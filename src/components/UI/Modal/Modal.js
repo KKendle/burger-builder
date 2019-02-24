@@ -1,7 +1,19 @@
 import React from 'react';
 
-const modal = (props) => {
+import './Modal.scss';
 
+const modal = (props) => {
+    let classes = ['Modal'];
+    if(props.show) {
+        classes.push('active');
+    }
+
+    return (
+        <div className={classes.join(' ')}>
+            <button onClick={props.close} className="close">Close X</button>
+            {props.children}
+        </div>
+    );
 };
 
 export default modal;
