@@ -30,7 +30,7 @@ class BurgerIngredient extends Component {
                 break;
 
             case ('salad'):
-                ingredient = <div className="salad"></div>;
+                ingredient = <div className="Salad"></div>;
                 break;
 
             case ('bacon'):
