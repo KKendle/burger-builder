@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './Modal.scss';
+import Aux from '../../../hoc/Aux';
+import Backdrop from '../Backdrop/Backdrop';
 
 const modal = (props) => {
     let classes = ['Modal'];
@@ -9,10 +11,14 @@ const modal = (props) => {
     }
 
     return (
-        <div className={classes.join(' ')}>
-            <button onClick={props.close} className="close">Close X</button>
-            {props.children}
-        </div>
+        <Aux>
+            <Backdrop
+                show={props.show} />
+            <div className={classes.join(' ')}>
+                <button onClick={props.close} className="close">Close X</button>
+                {props.children}
+            </div>
+        </Aux>
     );
 };
 
